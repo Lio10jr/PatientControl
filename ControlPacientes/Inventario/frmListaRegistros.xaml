@@ -1,0 +1,28 @@
+﻿<Window x:Class="ControlPacientes.Inventario.frmListaRegistros"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControlPacientes.Inventario"
+        mc:Ignorable="d"
+        Title="frmListaRegistros" Height="379.059" Width="596.157" Loaded="Window_Loaded">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF50FFF7" Offset="0"/>
+            <GradientStop Color="White" Offset="0.68"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <DataGrid ItemsSource="{Binding}" x:Name="dgDoctor" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True"  HorizontalAlignment="Left" Height="175" Margin="73,112,0,0" VerticalAlignment="Top" Width="448">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Cedula" Binding="{Binding Cedula}" Width="100" />
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="120" />
+                <DataGridTextColumn Header="Contraseña" Binding="{Binding Contraseña}" Width="120" />
+                <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}" Width="100" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Usuarios Registrados" Margin="140,29,140,0" VerticalAlignment="Top" Height="31" FontWeight="Bold" FontFamily="Forte" FontSize="20" RenderTransformOrigin="-0.405,-0.552"/>
+        <TextBox x:Name="txtBuscar" Height="28" Margin="396,65,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="119" BorderBrush="#89000000" HorizontalAlignment="Left" RenderTransformOrigin="2.62,0.75" TextChanged="txtBuscar_TextChanged" Background="White"/>
+
+    </Grid>
+</Window>

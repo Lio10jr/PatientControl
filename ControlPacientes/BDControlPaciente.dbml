@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ControlMedicoPacientes" Class="BDControlPacienteDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=KINGZM10;Initial Catalog=ControlMedicoPacientes;Integrated Security=True" SettingsObjectName="ControlPacientes.Properties.Settings" SettingsPropertyName="ControlMedicoPacientesConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.cp_ActualizarConsultorio" Method="cp_ActualizarConsultorio">
+    <Parameter Name="idC" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="idMedico" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_ActualizarEnfermera" Method="cp_ActualizarEnfermera">
+    <Parameter Name="idE" Type="System.Int32" DbType="Int" />
+    <Parameter Name="titulo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="especialidad" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="cedula" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_ActualizarEstadistica" Method="cp_ActualizarEstadistica">
+    <Parameter Name="idCodex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NumCarpeta" Parameter="numCarpeta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idFichaMedica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idE" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_ActualizarHistorialPaciente" Method="cp_ActualizarHistorialPaciente">
+    <Parameter Name="idH" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NumeroConsultas" Parameter="numeroConsultas" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fecha" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="idPaciente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idMedico" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_ActualizarMedicamento" Method="cp_ActualizarMedicamento">
+    <Parameter Name="idM" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Peso" Parameter="peso" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Tipo" Parameter="tipo" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_ActualizarPaciente" Method="cp_ActualizarPaciente">
+    <Parameter Name="idP" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Estado" Parameter="estado" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="Afiliado" Parameter="afiliado" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="ced" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_EliminarConsultorio" Method="cp_EliminarConsultorio">
+    <Parameter Name="idC" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_EliminarEnfermera" Method="cp_EliminarEnfermera">
+    <Parameter Name="idE" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_EliminarEstadistica" Method="cp_EliminarEstadistica">
+    <Parameter Name="idCodex" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_EliminarFichaMedica" Method="cp_EliminarFichaMedica">
+    <Parameter Name="idFichaM" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_EliminarHistorialPaciente" Method="cp_EliminarHistorialPaciente">
+    <Parameter Name="idH" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_EliminarMedicamento" Method="cp_EliminarMedicamento">
+    <Parameter Name="idM" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_EliminarMedico" Method="cp_EliminarMedico">
+    <Parameter Name="idM" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_EliminarPaciente" Method="cp_EliminarPaciente">
+    <Parameter Name="idP" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_EliminarPersona" Method="cp_EliminarPersona">
+    <Parameter Name="ced" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_InsertarConsultorio" Method="cp_InsertarConsultorio">
+    <Parameter Name="idC" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="idMedico" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_InsertarEnfermera" Method="cp_InsertarEnfermera">
+    <Parameter Name="idE" Type="System.Int32" DbType="Int" />
+    <Parameter Name="titulo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="especialidad" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="cedula" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_InsertarEstadistica" Method="cp_InsertarEstadistica">
+    <Parameter Name="idCodex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NumCarpeta" Parameter="numCarpeta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idFichaMedica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idE" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_InsertarHistorialPaciente" Method="cp_InsertarHistorialPaciente">
+    <Parameter Name="idH" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NumeroConsultas" Parameter="numeroConsultas" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fecha" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="idPaciente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idMedico" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_InsertarMedicamento" Method="cp_InsertarMedicamento">
+    <Parameter Name="idM" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Peso" Parameter="peso" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Tipo" Parameter="tipo" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_InsertarPaciente" Method="cp_InsertarPaciente">
+    <Parameter Name="idP" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Estado" Parameter="estado" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="Afiliado" Parameter="afiliado" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="ced" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_InsertarPersona" Method="cp_InsertarPersona">
+    <Parameter Name="ced" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="Apellido" Parameter="apellido" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="dir" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Ciudad" Parameter="ciudad" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="fecha" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Celular" Parameter="celular" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_ListarConsultorio" Method="cp_ListarConsultorio">
+    <ElementType Name="cp_ListarConsultorioResult">
+      <Column Name="idConsultorio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="idMedico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_ListarConsultorioFiltro" Method="cp_ListarConsultorioFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="cp_ListarConsultorioFiltroResult">
+      <Column Name="idConsultorio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="idMedico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_ListarEnfermera" Method="cp_ListarEnfermera">
+    <ElementType Name="cp_ListarEnfermeraResult">
+      <Column Name="idEnfermera" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Especialidad" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cedula" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_ListarEnfermeraFiltro" Method="cp_ListarEnfermeraFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="cp_ListarEnfermeraFiltroResult">
+      <Column Name="idEnfermera" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Especialidad" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cedula" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_ListarEstadistica" Method="cp_ListarEstadistica">
+    <ElementType Name="cp_ListarEstadisticaResult">
+      <Column Name="Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idEnfermera" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroCarpeta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idFichaMedica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_ListarEstadisticaFiltro" Method="cp_ListarEstadisticaFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.Int32" DbType="Int" />
+    <ElementType Name="cp_ListarEstadisticaFiltroResult">
+      <Column Name="Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idEnfermera" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroCarpeta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idFichaMedica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_ListarFichaMedica" Method="cp_ListarFichaMedica">
+    <ElementType Name="cp_ListarFichaMedicaResult">
+      <Column Name="idFichaMedica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idPaciente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Madre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Padre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Estudios" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GrupoSanguineo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Edad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Peso" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Talla" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Estatura" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_ListarHistorialPaciente" Method="cp_ListarHistorialPaciente">
+    <ElementType Name="cp_ListarHistorialPacienteResult">
+      <Column Name="idRegistroPaciente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroConsultas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UltimaFechaConsulta" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="idPaciente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idMedico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_ListarMedicamentoFiltro" Method="cp_ListarMedicamentoFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="cp_ListarMedicamentoFiltroResult">
+      <Column Name="idMedicamento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Peso" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_ListarMedicamentos" Method="cp_ListarMedicamentos">
+    <ElementType Name="cp_ListarMedicamentosResult">
+      <Column Name="idMedicamento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Peso" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_ListarPaciente" Method="cp_ListarPaciente">
+    <ElementType Name="cp_ListarPacienteResult">
+      <Column Name="idPaciente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="AfiliadoSS" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Cedula" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_ListarPacienteFiltro" Method="cp_ListarPacienteFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="cp_ListarPacienteFiltroResult">
+      <Column Name="idPaciente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="AfiliadoSS" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Cedula" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_ListarPersona" Method="cp_ListarPersona">
+    <ElementType Name="cp_ListarPersonaResult">
+      <Column Name="Cedula" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombres" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Apellidos" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Ciudad" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="FechaNacimiento" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Celular" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_ActualizarFichaMedica" Method="cp_ActualizarFichaMedica">
+    <Parameter Name="idFichaM" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPaciente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Madre" Parameter="madre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Padre" Parameter="padre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Estudios" Parameter="estudios" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="GruposS" Parameter="gruposS" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Edad" Parameter="edad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Peso" Parameter="peso" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Estatura" Parameter="estatura" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_InsertarFichaMedica" Method="cp_InsertarFichaMedica">
+    <Parameter Name="idFichaM" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPaciente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Madre" Parameter="madre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Padre" Parameter="padre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Estudios" Parameter="estudios" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="GruposS" Parameter="gruposS" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Edad" Parameter="edad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Peso" Parameter="peso" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Estatura" Parameter="estatura" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_ActualizarPersona" Method="cp_ActualizarPersona">
+    <Parameter Name="ced" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="Apellido" Parameter="apellido" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="dir" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Ciudad" Parameter="ciudad" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="fecha" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Celular" Parameter="celular" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_ActualizarRecetas" Method="cp_ActualizarRecetas">
+    <Parameter Name="num" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dosis" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="idMedi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idMedico" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPaciente" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_EliminarRecetas" Method="cp_EliminarRecetas">
+    <Parameter Name="num" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_ListarRecetas" Method="cp_ListarRecetas">
+    <ElementType Name="cp_ListarRecetasResult">
+      <Column Name="NumeroReceta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Dosis" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="FechaActual" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="idMedicamento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idMedico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idPaciente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_ListarRecetasFiltro" Method="cp_ListarRecetasFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="cp_ListarRecetasFiltroResult">
+      <Column Name="NumeroReceta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Dosis" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="FechaActual" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="idMedicamento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idMedico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idPaciente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_ActualizarRegistarse" Method="cp_ActualizarRegistarse">
+    <Parameter Name="ced" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="nom" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="contra" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tipo" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_ListarRegistro" Method="cp_ListarRegistro">
+    <ElementType Name="cp_ListarRegistroResult">
+      <Column Name="Cedula" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contraseña" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_EliminarRegistarse" Method="cp_EliminarRegistarse">
+    <Parameter Name="ced" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_InsertarRecetas" Method="cp_InsertarRecetas">
+    <Parameter Name="num" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dosis" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="idMedi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idMedico" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idPaciente" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_InsertarRegistarse" Method="cp_InsertarRegistarse">
+    <Parameter Name="ced" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="nom" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="contra" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tipo" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_ActualizarLogin" Method="cp_ActualizarLogin">
+    <Parameter Name="nom" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="contra" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ced" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_EliminarLogin" Method="cp_EliminarLogin">
+    <Parameter Name="ced" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_InsertarLogin" Method="cp_InsertarLogin">
+    <Parameter Name="nom" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="contra" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ced" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_ListarLogin" Method="cp_ListarLogin">
+    <ElementType Name="cp_ListarLoginResult">
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contraseña" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Cedula" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_ActualizarMedico" Method="cp_ActualizarMedico">
+    <Parameter Name="idM" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Titulo" Parameter="titulo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Especialidad" Parameter="especialidad" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Estado" Parameter="estado" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ced" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_InsertarMedico" Method="cp_InsertarMedico">
+    <Parameter Name="idM" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Titulo" Parameter="titulo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Especialidad" Parameter="especialidad" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Estado" Parameter="estado" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ced" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cp_ListarMedicoFiltro" Method="cp_ListarMedicoFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="cp_ListarMedicoFiltroResult">
+      <Column Name="idMedico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Especialidad" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cedula" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_ListarMedico" Method="cp_ListarMedico">
+    <ElementType Name="cp_ListarMedicoResult">
+      <Column Name="idMedico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Especialidad" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cedula" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_ListarRegistroFiltro" Method="cp_ListarRegistroFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="cp_ListarRegistroFiltroResult">
+      <Column Name="Cedula" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contraseña" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_ListarHistorialPacienteFiltro" Method="cp_ListarHistorialPacienteFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="cp_ListarHistorialPacienteFiltroResult">
+      <Column Name="idRegistroPaciente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroConsultas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UltimaFechaConsulta" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="idPaciente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idMedico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cp_ListarFichaMedicaFiltro" Method="cp_ListarFichaMedicaFiltro">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="cp_ListarFichaMedicaFiltroResult">
+      <Column Name="idFichaMedica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idPaciente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Madre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Padre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Estudios" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GrupoSanguineo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Edad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Peso" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Estatura" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

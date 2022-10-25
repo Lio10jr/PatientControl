@@ -1,0 +1,49 @@
+﻿<Window x:Class="ControlPacientes.Inventario.frmEditFichaMedica"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControlPacientes.Inventario"
+        mc:Ignorable="d"
+        Title="frmEditFichaMedica" Height="535.272" Width="404.965" Activated="Window_Activated">
+    <Window.Background>
+        <ImageBrush ImageSource="/ControlPacientes;component/Recursos/Edit.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid>
+        <Label Content="Insertar Ficha Medica" x:Name="lbNombre" x:FieldModifier="public" Margin="44,14,44,0" VerticalAlignment="Top" Height="50" FontFamily="Forte" FontSize="30" Foreground="#DD0DC188"/>
+        <Label Content="Paciente*" HorizontalAlignment="Left" Margin="58,86,0,0" VerticalAlignment="Top" Height="29" Width="82" FontFamily="Forte" FontSize="17"/>
+        <Label Content="Madre*" HorizontalAlignment="Left" Margin="58,123,0,0" VerticalAlignment="Top" Height="29" Width="85" FontFamily="Forte" FontSize="17"/>
+        <Label Content="Padre*" HorizontalAlignment="Left" Margin="58,154,0,0" VerticalAlignment="Top" Height="30" Width="85" FontFamily="Forte" FontSize="17"/>
+        <Label Content="Estudios*" HorizontalAlignment="Left" Margin="58,189,0,0" VerticalAlignment="Top" Height="29" Width="85" FontFamily="Forte" FontSize="17"/>
+        <Label Content="Grupo sanguineo*" Margin="58,223,199,0" VerticalAlignment="Top" Height="29" FontFamily="Forte" FontSize="17"/>
+        <Label Content="Edad*" HorizontalAlignment="Left" Margin="58,257,0,0" VerticalAlignment="Top" Height="30" Width="152" FontFamily="Forte" FontSize="17"/>
+        <Label Content="Peso*" HorizontalAlignment="Left" Margin="58,296,0,0" VerticalAlignment="Top" Height="30" Width="68" FontFamily="Forte" FontSize="17"/>
+        <Label Content="Estatura*" HorizontalAlignment="Left" Margin="58,328,0,0" VerticalAlignment="Top" Height="30" Width="85" FontFamily="Forte" FontSize="17"/>
+        <TextBox x:Name="txtMadre" HorizontalAlignment="Left" Height="22" Margin="140,128,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="195" BorderBrush="#891A72CB"/>
+        <TextBox x:Name="txtPadre" HorizontalAlignment="Left" Height="22" Margin="140,158,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="195" BorderBrush="#891A72CB"/>
+        <TextBox x:Name="txtEstudios" HorizontalAlignment="Left" Height="22" Margin="140,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="195" BorderBrush="#891A72CB"/>
+        <TextBox x:Name="txtGurpoS" HorizontalAlignment="Left" Height="22" Margin="208,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="127" BorderBrush="#891A72CB"/>
+        <TextBox x:Name="txtPeso" HorizontalAlignment="Left" Height="22" Margin="140,299,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="195" BorderBrush="#891A72CB"/>
+        <TextBox x:Name="txtEstatura" HorizontalAlignment="Left" Height="22" Margin="140,332,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="195" BorderBrush="#891A72CB"/>
+        <Button x:Name="btnRegistrar" Content="Registrar" HorizontalAlignment="Left" Height="36" Margin="78,448,0,0" VerticalAlignment="Top" Width="98" Click="Button_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF3FB2A2" Offset="0.29"/>
+                    <GradientStop Color="#FF1F51D6" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label  x:Name="lbMensaje" x:FieldModifier="public" HorizontalAlignment="Left" Height="67" Margin="58,363,0,0" VerticalAlignment="Top" Width="290"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Height="36" Margin="218,448,0,0" VerticalAlignment="Top" Width="98" Click="Button_Click1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF3FB2A2" Offset="0.29"/>
+                    <GradientStop Color="#FF1F51D6" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="txtEdad" MaxLength="3" HorizontalAlignment="Left" Height="22" Margin="140,261,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="195" BorderBrush="#891A72CB"/>
+        <ComboBox x:Name="comboPaciente" HorizontalAlignment="Left" Margin="140,90,0,0" VerticalAlignment="Top" Width="195" BorderBrush="#FF0078D7"/>
+
+    </Grid>
+</Window>

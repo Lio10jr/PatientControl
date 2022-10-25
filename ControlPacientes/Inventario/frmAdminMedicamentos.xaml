@@ -1,0 +1,40 @@
+﻿<Window x:Class="ControlPacientes.Inventario.frmAdminMedicamentos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControlPacientes.Inventario"
+        mc:Ignorable="d"
+        Title="frmAdminMedicamentos" Height="437.5" Width="689.444" Loaded="Window_Loaded">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF50FFF7" Offset="0"/>
+            <GradientStop Color="White" Offset="0.735"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="136*"/>
+            <ColumnDefinition Width="501*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Admin Medicamentos" Margin="94,13,96,0" VerticalAlignment="Top" Height="45" FontWeight="Bold" FontFamily="Forte" FontSize="30" Grid.Column="1"/>
+        <DataGrid ItemsSource="{Binding}" x:Name="dgEnfermera" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" Height="204" Margin="28,124,29,0" VerticalAlignment="Top" Grid.Column="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="id Medicamento" Binding="{Binding IdMedicamento}"/>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="150" />
+                <DataGridTextColumn Header="Peso" Binding="{Binding Peso}"/>
+                <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Rectangle Fill="#FF7979EA" HorizontalAlignment="Left" Height="407" VerticalAlignment="Top" Width="136"/>
+        <Label x:Name="lbEstado" HorizontalAlignment="Left" Height="25" Margin="54,352,0,0" VerticalAlignment="Top" Width="416" Grid.Column="1"/>
+        <Button Content="Añadir" Height="37" Margin="24,77,14,0" VerticalAlignment="Top" Click="btnRegistrar" Background="{x:Null}" FontWeight="Bold" Foreground="#DD000000" BorderBrush="{x:Null}"/>
+        <Button Content="Modificar" Height="37" Margin="24,173,14,0" VerticalAlignment="Top" Background="{x:Null}" FontWeight="Bold" Foreground="#DD000000" Click="Button_Click_1" BorderBrush="{x:Null}"/>
+        <Button Content="Eliminar" Height="37" Margin="24,270,14,0" VerticalAlignment="Top" Click="Button_Click_2" Background="{x:Null}" FontWeight="Bold" Foreground="#DD000000" BorderBrush="{x:Null}"/>
+        <Image Height="50"  Width="50" Margin="48,15,38,0" VerticalAlignment="Top" Source="/ControlPacientes;component/Recursos/nuevoMedicamento.png" />
+        <Image Height="50" Width="50" Margin="48,119,38,0" VerticalAlignment="Top" Source="/ControlPacientes;component/Recursos/mod.png" />
+        <Image Height="50" Width="50" Margin="48,215,38,0" VerticalAlignment="Top" Source="/ControlPacientes;component/Recursos/modificarMedicamento.png" />
+        <TextBox x:Name="txtBuscar" Height="28" Margin="387,72,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="119" BorderBrush="#89FF0000" HorizontalAlignment="Left" RenderTransformOrigin="2.62,0.75" TextChanged="txtBuscar_TextChanged" Grid.Column="1" Background="White"/>
+
+    </Grid>
+</Window>

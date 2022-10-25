@@ -1,0 +1,42 @@
+﻿<Window x:Class="ControlPacientes.Inventario.frmAdminEnfermera"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControlPacientes.Inventario"
+        mc:Ignorable="d"
+        Title="frmAdminEnfermera" Height="416.667" Width="651.167" Loaded="Window_Loaded">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF50FFF7"/>
+            <GradientStop Color="White" Offset="0.64"/>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="125*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Admin Enfermeras" Margin="121,11,121,0" VerticalAlignment="Top" Height="45" FontWeight="Bold" FontFamily="Forte" FontSize="30" Grid.Column="1"/>
+        <DataGrid ItemsSource="{Binding}" x:Name="dgEnfermera" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" Height="204" Margin="24,117,25,0" VerticalAlignment="Top" Grid.Column="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="idEnfermera" Binding="{Binding IdEnfermera}"/>
+                <DataGridTextColumn Header="Titulo" Binding="{Binding Titulo}" Width="120" />
+                <DataGridTextColumn Header="Especialidad" Binding="{Binding Especialidad}" Width="120"/>
+                <DataGridTextColumn Header="Cedula" Binding="{Binding Cedula}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Rectangle Fill="#FF7979EA" HorizontalAlignment="Left" Height="386" VerticalAlignment="Top" Width="122"/>
+        <Label x:Name="lbEstado" HorizontalAlignment="Left" Height="25" Margin="30,337,0,0" VerticalAlignment="Top" Width="438" Grid.Column="1"/>
+        <Button Content="Registrar" Height="37" Margin="12,71,14,0" VerticalAlignment="Top" Click="btnRegistrar" Background="{x:Null}" FontWeight="Bold" Foreground="#DD000000" BorderBrush="{x:Null}"/>
+        <Button Content="Modificar" Height="37" Margin="12,175,14,0" VerticalAlignment="Top" Background="{x:Null}" FontWeight="Bold" Foreground="#DD000000" Click="Button_Click_1" BorderBrush="{x:Null}"/>
+        <Button Content="Eliminar" Height="37" Margin="8,274,16,0" VerticalAlignment="Top" Click="Button_Click_2" Background="{x:Null}" FontWeight="Bold" Foreground="#DD000000" BorderBrush="{x:Null}"/>
+        <Image Height="50" Width="50"  Margin="40,15,41,0" VerticalAlignment="Top" Source="/ControlPacientes;component/Recursos/AñadirDoc.png" />
+        <Image Height="50" Width="50"  Margin="40,119,41,0" VerticalAlignment="Top" Source="/ControlPacientes;component/Recursos/Modificar.png" />
+        <Image Height="50" Width="50"  Margin="40,215,41,0" VerticalAlignment="Top" Source="/ControlPacientes;component/Recursos/DesHabilitar.png" />
+        <TextBox x:Name="txtBuscar" Height="28" Margin="351,69,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="119" BorderBrush="#89000000" HorizontalAlignment="Left" RenderTransformOrigin="2.62,0.75" TextChanged="txtBuscar_TextChanged" Grid.Column="1" Background="White"/>
+
+    </Grid>
+</Window>

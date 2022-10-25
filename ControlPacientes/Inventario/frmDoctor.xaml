@@ -1,0 +1,42 @@
+﻿<Window x:Class="ControlPacientes.Inventario.Doctor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControlPacientes.Inventario"
+        mc:Ignorable="d"
+        Title="Doctor" Height="450" Width="765.1" Loaded="Window">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF50FFF7" Offset="0"/>
+            <GradientStop Color="White" Offset="0.738"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="607*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid ItemsSource="{Binding}" x:Name="dgDoctor" Grid.Column="1" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True"  HorizontalAlignment="Left" Height="204" Margin="81,79,0,0" VerticalAlignment="Top" Width="440">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="id" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="Titulo" Binding="{Binding Titulo}"/>
+                <DataGridTextColumn Header="Especialidad" Binding="{Binding Especialidad}"/>
+                <DataGridTextColumn Header="Estado" Binding="{Binding Estado}"/>
+                <DataGridTextColumn Header="Cedula" Binding="{Binding Ced}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Rectangle Fill="#FF7979EA" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="136"/>
+        <Label x:Name="lbEstado" HorizontalAlignment="Left" Height="25" Margin="83,303,0,0" VerticalAlignment="Top" Width="438" Grid.Column="1"/>
+        <Button Content="Registrar" Height="36" Margin="11,74,31,0" VerticalAlignment="Top" Click="btnRegistrar" Background="{x:Null}" FontWeight="Bold" Foreground="#DD000000" BorderBrush="{x:Null}"/>
+        <Button Content="Modificar" Height="36" Margin="16,178,36,0" VerticalAlignment="Top" Background="{x:Null}" FontWeight="Bold" Foreground="#DD000000" Click="Button_Click_1" RenderTransformOrigin="-2.592,-4.351" BorderBrush="{x:Null}"/>
+        <Label Content="Admin Doctores" Margin="184,22,183,0" VerticalAlignment="Top" Height="51" FontWeight="Bold" FontFamily="Forte" FontSize="30" Grid.Column="1"/>
+        <Image Height="50" Width="50" Margin="40,19,60,0" VerticalAlignment="Top" Source="/Recursos/AñadirDoc.png" />
+        <Image Height="50" Width="50" Margin="40,123,60,0" VerticalAlignment="Top" Source="/ControlPacientes;component/Recursos/Modificar.png" />
+        <Image HorizontalAlignment="Left" Height="50" Margin="40,219,0,0" VerticalAlignment="Top" Width="50" Source="/ControlPacientes;component/Recursos/DesHabilitar.png" />
+        <Button Content="Eliminar" Height="36" Margin="4,274,24,0" VerticalAlignment="Top" Background="{x:Null}" FontWeight="Bold" Foreground="#DD000000" Click="Button_Click_10" RenderTransformOrigin="-2.592,-4.351" BorderBrush="{x:Null}"/>
+
+
+
+    </Grid>
+</Window>
