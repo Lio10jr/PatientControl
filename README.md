@@ -4,12 +4,11 @@
 
 ## Tabla de Contenido
 
-1. [Introducción](#introduction)
-2. [Características](#features)
-3. [Tecnologías](#technologies)
-4. [Instalación](#installation)
-5. [Usage](#usage)
-6. [Contact](#contact)
+1. [Introducción](#introducción)
+2. [Características](#características)
+3. [Tecnologías](#tecnologías)
+4. [Instalación](#instalación)
+5. [Contacto](#contacto)
 
 ## Introducción
 
