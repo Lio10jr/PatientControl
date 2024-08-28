@@ -34,7 +34,7 @@ PatientControl un sistema con de control médico, gestiona fichas medicas, pacie
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/PatientControl.git
+   git clone https://github.com/Lio10jr/PatientControl.git
 
 2. **Abrir la solución en Visual Studio:**
 
